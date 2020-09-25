@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 @NgModule({
   declarations: [HomeComponent],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    ModalModule.forRoot()
   ]
 })
 export class HomeModule { }
