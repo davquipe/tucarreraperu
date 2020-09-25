@@ -6,9 +6,9 @@
   </div>
   <br>
   <div class="container">
-    <h2>¿Ya sabes que carrera estudiar?</h2>
-    <h2 align="right">¿Aún no sabes sobre el futuro profesional que hay en ti?</h2>
-    <h2 align="center">¡Qué estas esperando!</h2>
+    <h2 align="center">¿No sabes qué estudiar?</h2>
+    <h3 align="center">Aquí te podemos ayudar</h3>
+    <h4 align="center">¡Qué estas esperando!</h4>
     <br>
     <div align="center">
       <button type="button" class="btn btn-primary btn-lg" [routerLink]="[ '/test' ]">Ingresa a nuestro Test
@@ -37,28 +37,125 @@
         <div class="col-12 col-sm-5 col-md-5 col-lg-5">
           <h3 style="color: deepskyblue;" class="text-center gris-o">Carreras Profesionales</h3>
           <ul class="list-group infoUtil">
-            <a href="#" class="list-group-item list-group-item-action ">Ingeniería de sistemas</a>
-            <a href="#" class="list-group-item list-group-item-action">Ingeniería Ambiental</a>
-            <a href="#" class="list-group-item list-group-item-action">Arquitectura</a>
-            <a href="#" class="list-group-item list-group-item-action">Contabilidad</a>
-            <a href="#" class="list-group-item list-group-item-action disabled">Medicina</a>
-            <a href="#" class="list-group-item list-group-item-action">Psicología</a>
-            <a href="#" class="list-group-item list-group-item-action">Marketing</a>
-            <a href="#" class="list-group-item list-group-item-action disabled">Administración</a>
+            <button type="button" class="btn btn-outline-dark" (click)="openModal(template1)">Ingeniería Civil</button>
+            <ng-template #template1>
+              <div class="modal-header">
+                <h4 class="modal-title pull-left">Ingeniería Civil</h4>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                This is a modal.
+              </div>
+            </ng-template>
+            <button type="button" class="btn btn-outline-dark" (click)="openModal(template2)">Marketing</button>
+            <ng-template #template2>
+              <div class="modal-header">
+                <h4 class="modal-title pull-left">Marketing</h4>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                This is a modal.
+              </div>
+            </ng-template>
+            <button type="button" class="btn btn-outline-dark" (click)="openModal(template3)">Policía</button>
+            <ng-template #template3>
+              <div class="modal-header">
+                <h4 class="modal-title pull-left">Policía</h4>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                This is a modal.
+              </div>
+            </ng-template>
+            <button type="button" class="btn btn-outline-dark" (click)="openModal(template4)">Arquitectura</button>
+            <ng-template #template4>
+              <div class="modal-header">
+                <h4 class="modal-title pull-left">Arquitectura</h4>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                This is a modal.
+              </div>
+            </ng-template>
+            <button type="button" class="btn btn-outline-dark" (click)="openModal(template5)">Administración</button>
+            <ng-template #template5>
+              <div class="modal-header">
+                <h4 class="modal-title pull-left">Administración</h4>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                This is a modal.
+              </div>
+            </ng-template>
+            <button type="button" class="btn btn-outline-dark" (click)="openModal(template6)">Medicina</button>
+            <ng-template #template6>
+              <div class="modal-header">
+                <h4 class="modal-title pull-left">Medicina</h4>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                This is a modal.
+              </div>
+            </ng-template>
+            <button type="button" class="btn btn-outline-dark" (click)="openModal(template7)">Aeromoza</button>
+            <ng-template #template7>
+              <div class="modal-header">
+                <h4 class="modal-title pull-left">Aeromoza</h4>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                This is a modal.
+              </div>
+            </ng-template>
+            <button type="button" class="btn btn-outline-dark" (click)="openModal(template8)">Ingeniería Ambiental</button>
+            <ng-template #template8>
+              <div class="modal-header">
+                <h4 class="modal-title pull-left">Ingeniería Ambiental</h4>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                This is a modal.
+              </div>
+            </ng-template>
+            <button type="button" class="btn btn-outline-dark" (click)="openModal(template9)">Ciencias de la Comunicaciones</button>
+            <ng-template #template9>
+              <div class="modal-header">
+                <h4 class="modal-title pull-left">Ciencias de la Comunicaciones</h4>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                This is a modal.
+              </div>
+            </ng-template>
+            <button type="button" class="btn btn-outline-dark" (click)="openModal(template10)">Piloto Comercial</button>
+            <ng-template #template10>
+              <div class="modal-header">
+                <h4 class="modal-title pull-left">Piloto Comercial</h4>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                This is a modal.
+              </div>
+            </ng-template>
           </ul>
         </div>
-
-
-<button type="button" class="btn btn-primary" (click)="openModal(template)">Create template modal</button>
- 
-<ng-template #template>
-  <div class="modal-header">
-    <h4 class="modal-title pull-left">Modal</h4>
-    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    This is a modal.
-  </div>
-</ng-template>
