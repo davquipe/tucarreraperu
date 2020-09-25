@@ -6,7 +6,6 @@ import { RouterModule } from '@angular/router';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 
 
-
 @NgModule({
   declarations: [NavbarComponent, FooterComponent],
   imports: [
