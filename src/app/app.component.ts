@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
-import { Router ,NavigationEnd } from '@angular/router';
-import { filter } from 'rxjs/operators';
+import { SeoService } from './services/seo.service';
 
-declare var gtag;
 
 @Component({
   selector: 'app-root',
@@ -11,18 +9,9 @@ declare var gtag;
 })
 export class AppComponent {
   title = 'tucarreraperu';
-
-  constructor (
-    private router: Router
+  constructor(
+    private seoService: SeoService
   ) {
-    const navEndEvents$ = this.router.events
-    .pipe(
-      filter(event => event instanceof NavigationEnd)
-    );
-    navEndEvents$.subscribe((event: NavigationEnd) => {
-      gtag('config', 'UA-177450076-1', {
-        'page_path': event.urlAfterRedirects
-      });
-    })
+    this.seoService.generateTags();
   }
 }
