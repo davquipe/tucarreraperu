@@ -100,16 +100,9 @@ button {
 	position: relative;
 	h1, h2, h3, h4, h5, h6, p, a, button {
 		position: absolute;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
-
-	.left-title{
-		left: 500px;
-	}
-
-	.left {
-		left: 590px;
-	}
-
 
 	.top_80 {
 		top: 80px;
