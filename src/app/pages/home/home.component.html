@@ -7,15 +7,18 @@
   <br>
   <div class="container">
     <img src="../../../assets/Logopet.png" alt="" style="width:15%;" align="right">
-    <h2 align="center">¿No sabes qué estudiar?</h2>
-    <h3 align="center">Aquí te podemos ayudar</h3>
-    <h4 align="center">¡Qué estas esperando!</h4>
-    <br>
-    <div align="center">
-      <button type="button" class="btn btn-primary btn-lg" [routerLink]="[ '/test' ]">Ingresa a nuestro Test
-        Vocacional</button>
+    <img src="../../../assets/cohete.png" alt="" style="width:10%;" align="left">
+    <img src="../../../assets/nubes.png" alt="" style="width:100%;" align="end">
+    <br><br>
+    <div class="container" style="text-align: center;">
+      <h2>¿No sabes qué estudiar?</h2>
+      <h3>Aquí te podemos ayudar</h3>
+      <h4>¡Qué estas esperando!</h4>
+      <br>
+      <br>
+        <button type="button" class="btn btn-primary btn-lg" [routerLink]="[ '/test' ]">HACER TEST VOCACIONAL</button>
     </div>
-    <div class="container">
+    <div class="containeraso">
       <div class="row">
         <div class="col-12 text-center">
           <h2 class="mb-2 mt-5 teal">Encuentra toda la información sobre:</h2>
@@ -47,10 +50,12 @@
                 </button>
               </div>
               <div class="modal-body">
-                  <img src="../../../assets/arqui.png" class="card-img-top" alt="" style="width: 45%;" align="left">
-                  <div class="card-body">
-                    <p align="left" class="card-text">La especialidad de la ingeniería que se encarga de la creación de infraestructuras, obras de transporte y emprendimiento hidráulicos se denomina ingeniería civil. Por lo general se ocupa de las obras públicas y de desarrollos de gran envergadura.</p>
-                  </div>
+                <img src="../../../assets/arqui.png" class="card-img-top" alt="" style="width: 45%;" align="left">
+                <div class="card-body">
+                  <p align="left" class="card-text">La especialidad de la ingeniería que se encarga de la creación de
+                    infraestructuras, obras de transporte y emprendimiento hidráulicos se denomina ingeniería civil. Por
+                    lo general se ocupa de las obras públicas y de desarrollos de gran envergadura.</p>
+                </div>
               </div>
             </ng-template>
             <button type="button" class="btn btn-outline-dark" (click)="openModal(template2)">Marketing</button>
@@ -64,9 +69,10 @@
               <div class="modal-body">
                 <img src="../../../assets/market.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
                 </div>
-            </div>
+              </div>
             </ng-template>
             <button type="button" class="btn btn-outline-dark" (click)="openModal(template3)">Policía</button>
             <ng-template #template3>
@@ -79,9 +85,10 @@
               <div class="modal-body">
                 <img src="../../../assets/polic.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
                 </div>
-            </div>
+              </div>
             </ng-template>
             <button type="button" class="btn btn-outline-dark" (click)="openModal(template4)">Gastronomía</button>
             <ng-template #template4>
@@ -94,9 +101,10 @@
               <div class="modal-body">
                 <img src="../../../assets/chef.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
                 </div>
-            </div>
+              </div>
             </ng-template>
             <button type="button" class="btn btn-outline-dark" (click)="openModal(template5)">Administración</button>
             <ng-template #template5>
@@ -109,9 +117,10 @@
               <div class="modal-body">
                 <img src="../../../assets/admin.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
                 </div>
-            </div>
+              </div>
             </ng-template>
             <button type="button" class="btn btn-outline-dark" (click)="openModal(template6)">Medicina</button>
             <ng-template #template6>
@@ -124,9 +133,10 @@
               <div class="modal-body">
                 <img src="../../../assets/medic.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
                 </div>
-            </div>
+              </div>
             </ng-template>
             <button type="button" class="btn btn-outline-dark" (click)="openModal(template7)">Aeromoza</button>
             <ng-template #template7>
@@ -139,11 +149,13 @@
               <div class="modal-body">
                 <img src="../../../assets/aerom.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
                 </div>
-            </div>
+              </div>
             </ng-template>
-            <button type="button" class="btn btn-outline-dark" (click)="openModal(template8)">Ingeniería Ambiental</button>
+            <button type="button" class="btn btn-outline-dark" (click)="openModal(template8)">Ingeniería
+              Ambiental</button>
             <ng-template #template8>
               <div class="modal-header">
                 <h4 class="modal-title pull-left">Ingeniería Ambiental</h4>
@@ -154,11 +166,13 @@
               <div class="modal-body">
                 <img src="../../../assets/ambien.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
                 </div>
-            </div>
+              </div>
             </ng-template>
-            <button type="button" class="btn btn-outline-dark" (click)="openModal(template9)">Ciencias de la Comunicaciones</button>
+            <button type="button" class="btn btn-outline-dark" (click)="openModal(template9)">Ciencias de la
+              Comunicaciones</button>
             <ng-template #template9>
               <div class="modal-header">
                 <h4 class="modal-title pull-left">Ciencias de la Comunicaciones</h4>
@@ -169,9 +183,10 @@
               <div class="modal-body">
                 <img src="../../../assets/market.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
                 </div>
-            </div>
+              </div>
             </ng-template>
             <button type="button" class="btn btn-outline-dark" (click)="openModal(template10)">Piloto Comercial</button>
             <ng-template #template10>
@@ -184,9 +199,10 @@
               <div class="modal-body">
                 <img src="../../../assets/pilot.png" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
                 </div>
-            </div>
+              </div>
             </ng-template>
           </ul>
         </div>
