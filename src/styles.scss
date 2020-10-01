@@ -100,18 +100,16 @@ button {
 	position: relative;
 	h1, h2, h3, h4, h5, h6, p, a, button {
 		position: absolute;
+		top: 30%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 	}
 
-	.top_80 {
-		top: 80px;
-	}
 	.top_120 {
-		top: 120px;
+		top: 150px;
 	}
 	.top_200 {
-		top: 200px
+		top: 250px
 	}
 }
 	
