@@ -33,11 +33,11 @@ a{
     }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h5, h6 {
     color: $base;
 }
 
-p {
+h4, p {
     color: $sec;
 }
 
@@ -83,7 +83,7 @@ textarea {
 }
 
 .black {
-    background-color: $base;
+	background-color: $base;
 	opacity: 1;
 	color: white;
 	&:hover {
@@ -108,7 +108,7 @@ textarea {
 	}
 
 	.top_120 {
-		top: 145px;
+		top: 178px;
 	}
 	.top_200 {
 		top: 230px
@@ -129,6 +129,14 @@ textarea {
 	box-shadow: -1px 4px 5px 2px rgba(201,195,201,1);
 }
 
+.btn-outline-info {
+	margin: 5px;
+	color: white;
+	border-color: azure;
+	background-color: $base;
+    background-image: none;
+}
+
 /////////////////////////////
 // Footer
 /////////////////////////////
@@ -139,7 +147,9 @@ textarea {
 		background-color: $sec;
 	}
 }
-
+a, p, h5 {
+	color: white;
+}
 
 
 
