@@ -13,7 +13,7 @@ export class SeoService {
 
   generateTags(config?) {
     config = {
-      title: 'TucarreraPer&uacute;',
+      title: 'Test vocacional - Tu Carrerra Perú',
       description: 'Realiza el test vocacional online y descubre la carrera universitaria ideal. El test para saber qué estudiar te ayuda a descubrir tu vocación.',
       image: '',
       slug: '',

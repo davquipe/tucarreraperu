@@ -61,7 +61,7 @@ textarea {
 }
 
 
-button {
+.btn-test {
     background-color: transparent;
 	text-transform: uppercase;
 	border: 1px solid $base;
@@ -70,7 +70,6 @@ button {
 	color: $base;
 	font-size: 16px;
 	letter-spacing: 1px;
-	cursor: pointer;
 	opacity: .7;
 	&:hover {
         opacity: 1;
