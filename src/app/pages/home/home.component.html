@@ -1,209 +1,50 @@
-<!-- <div class="container">
-  <div class="contenedor">
-    <h1 align="center">Bienvenido a </h1>
-    <h1 style="color: orange;">Tucarrera</h1>
-    <h1 style="color: deepskyblue;"> Per&uacute; </h1>
+<div class="border border-dark rounded">
+  <div class="sticky-top" align="center">
+    <a class="btn btn-primary">CARRERAS PROFESIONALES</a>
+  </div><br>
+  <div class="row" align="center">
+    <div class="col-lg-4">
+      <img src="../../../assets/admin.png" class="rounded-circle" alt="Cinque Terre" width="50%"><br>
+      <a class="btn btn-outline-info" href="#" role="button">View details »</a>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+      <img src="../../../assets/aerom.png" class="rounded-circle" alt="Cinque Terre" width="50%"><br>
+      <a class="btn btn-secondary" href="#" role="button">View details »</a>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+      <img src="../../../assets/arqui.png" class="rounded-circle" alt="Cinque Terre" width="50%"><br>
+      <a class="btn btn-secondary" href="#" role="button">View details »</a>
+    </div><!-- /.col-lg-4 -->
   </div>
   <br>
-  <div class="container">
-    <img src="../../../assets/Logopet.png" alt="" style="width:15%;" align="right">
-    <img src="../../../assets/cohete.png" alt="" style="width:10%;" align="left">
-    <img src="../../../assets/nubes.png" alt="" style="width:100%;" align="end">
-    <br><br>
-    <div class="container" style="text-align: center;">
-      <h2>¿No sabes qué estudiar?</h2>
-      <h3>Aquí te podemos ayudar</h3>
-      <h4>¡Qué estas esperando!</h4>
-      <br>
-      <br>
-        <button type="button" class="btn btn-primary btn-lg" [routerLink]="[ '/test' ]">HACER TEST VOCACIONAL</button>
-    </div>
-    <div class="containeraso">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h2 class="mb-2 mt-5 teal">Encuentra toda la información sobre:</h2>
-        </div>
-
-        <div class="col-12 col-sm-7 col-md-7 col-lg-7">
-          <h3 style="color: orange;" class="text-center gris-o">Universidades en el Perú</h3>
-          <ul class="list-group infoUtil">
-            <a href="#" class="list-group-item list-group-item-action ">Universidad Peruana Unión</a>
-            <a href="#" class="list-group-item list-group-item-action">Universidad Nacional de Ingeniería</a>
-            <a href="#" class="list-group-item list-group-item-action">Universidad Nacional Mayor de San Marcos</a>
-            <a href="#" class="list-group-item list-group-item-action">Universidad de Lima</a>
-            <a href="#" class="list-group-item list-group-item-action disabled">Universidad del Pacífico</a>
-            <a href="#" class="list-group-item list-group-item-action">Universidad Cayetano Heredia</a>
-            <a href="#" class="list-group-item list-group-item-action">Universidad César Vallejo</a>
-            <a href="#" class="list-group-item list-group-item-action disabled">Universidad Nacional del Callao</a>
-          </ul>
-        </div>
-
-        <div class="col-12 col-sm-5 col-md-5 col-lg-5">
-          <h3 style="color: deepskyblue;" class="text-center gris-o">Carreras Profesionales</h3>
-          <ul class="list-group infoUtil">
-            <button type="button" class="btn btn-outline-dark" (click)="openModal(template1)">Ingeniería Civil</button>
-            <ng-template #template1>
-              <div class="modal-header">
-                <h4 class="modal-title pull-left">Ingeniería Civil</h4>
-                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <img src="../../../assets/arqui.png" class="card-img-top" alt="" style="width: 45%;" align="left">
-                <div class="card-body">
-                  <p align="left" class="card-text">La especialidad de la ingeniería que se encarga de la creación de
-                    infraestructuras, obras de transporte y emprendimiento hidráulicos se denomina ingeniería civil. Por
-                    lo general se ocupa de las obras públicas y de desarrollos de gran envergadura.</p>
-                </div>
-              </div>
-            </ng-template>
-            <button type="button" class="btn btn-outline-dark" (click)="openModal(template2)">Marketing</button>
-            <ng-template #template2>
-              <div class="modal-header">
-                <h4 class="modal-title pull-left">Marketing</h4>
-                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <img src="../../../assets/market.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                </div>
-              </div>
-            </ng-template>
-            <button type="button" class="btn btn-outline-dark" (click)="openModal(template3)">Policía</button>
-            <ng-template #template3>
-              <div class="modal-header">
-                <h4 class="modal-title pull-left">Policía</h4>
-                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <img src="../../../assets/polic.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                </div>
-              </div>
-            </ng-template>
-            <button type="button" class="btn btn-outline-dark" (click)="openModal(template4)">Gastronomía</button>
-            <ng-template #template4>
-              <div class="modal-header">
-                <h4 class="modal-title pull-left">Gastronomía</h4>
-                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <img src="../../../assets/chef.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                </div>
-              </div>
-            </ng-template>
-            <button type="button" class="btn btn-outline-dark" (click)="openModal(template5)">Administración</button>
-            <ng-template #template5>
-              <div class="modal-header">
-                <h4 class="modal-title pull-left">Administración</h4>
-                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <img src="../../../assets/admin.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                </div>
-              </div>
-            </ng-template>
-            <button type="button" class="btn btn-outline-dark" (click)="openModal(template6)">Medicina</button>
-            <ng-template #template6>
-              <div class="modal-header">
-                <h4 class="modal-title pull-left">Medicina</h4>
-                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <img src="../../../assets/medic.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                </div>
-              </div>
-            </ng-template>
-            <button type="button" class="btn btn-outline-dark" (click)="openModal(template7)">Aeromoza</button>
-            <ng-template #template7>
-              <div class="modal-header">
-                <h4 class="modal-title pull-left">Aeromoza</h4>
-                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <img src="../../../assets/aerom.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                </div>
-              </div>
-            </ng-template>
-            <button type="button" class="btn btn-outline-dark" (click)="openModal(template8)">Ingeniería
-              Ambiental</button>
-            <ng-template #template8>
-              <div class="modal-header">
-                <h4 class="modal-title pull-left">Ingeniería Ambiental</h4>
-                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <img src="../../../assets/ambien.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                </div>
-              </div>
-            </ng-template>
-            <button type="button" class="btn btn-outline-dark" (click)="openModal(template9)">Ciencias de la
-              Comunicaciones</button>
-            <ng-template #template9>
-              <div class="modal-header">
-                <h4 class="modal-title pull-left">Ciencias de la Comunicaciones</h4>
-                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <img src="../../../assets/market.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                </div>
-              </div>
-            </ng-template>
-            <button type="button" class="btn btn-outline-dark" (click)="openModal(template10)">Piloto Comercial</button>
-            <ng-template #template10>
-              <div class="modal-header">
-                <h4 class="modal-title pull-left">Piloto Comercial</h4>
-                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <img src="../../../assets/pilot.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                </div>
-              </div>
-            </ng-template>
-          </ul>
-        </div>
- -->
+  <div class="row" align="center">
+    <div class="col-lg-4" >
+      <img src="../../../assets/chef.png" class="rounded-circle" alt="Cinque Terre" width="50%"><br>
+      <a class="btn btn-secondary" href="#" role="button">View details »</a>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+      <img src="../../../assets/leyes.png" class="rounded-circle" alt="Cinque Terre" width="50%"><br>
+      <a class="btn btn-secondary" href="#" role="button">View details »</a>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+      <img src="../../../assets/market.png" class="rounded-circle" alt="Cinque Terre" width="50%"><br>
+      <a class="btn btn-secondary" href="#" role="button">View details »</a>
+    </div><!-- /.col-lg-4 -->
+  </div>
+  <br>
+  <div class="row" align="center">
+    <div class="col-lg-4" >
+      <img src="../../../assets/medic.png" class="rounded-circle" alt="Cinque Terre" width="50%"><br>
+      <a class="btn btn-secondary" href="#" role="button">View details »</a>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+      <img src="../../../assets/pilot.png" class="rounded-circle" alt="Cinque Terre" width="50%"><br>
+      <a class="btn btn-secondary" href="#" role="button">View details »</a>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+      <img src="../../../assets/polic.png" class="rounded-circle" alt="Cinque Terre" width="50%"><br>
+      <a class="btn btn-secondary" href="#" role="button">View details »</a>
+    </div><!-- /.col-lg-4 -->
+  </div>
+  <br>
+</div>
