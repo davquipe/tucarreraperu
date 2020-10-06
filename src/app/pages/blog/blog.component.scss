@@ -137,3 +137,52 @@ body
     border-radius: 18px;
     box-shadow: 0 0 0 3px #a7c9f7;
 }
+
+// responsive
+
+@media (max-width: 1000px) {
+    .timeline-blog {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .h5-blog {
+        color: black;
+        text-align: center;
+        font-size: 40px;
+        padding: 0 20px;
+    }
+
+    .timeline-blog {
+        width: 100%;
+        padding-bottom: 0px;
+    }
+
+    .timeline-blog:before {
+        left: 20px;
+    }
+
+    .timeline-blog ul li:nth-child(odd),
+    .timeline-blog ul li:nth-child(even) {
+        width: 100%;
+        text-align: left;
+        padding-left: 50px;
+        padding-bottom: 50px;
+
+    }
+
+    .timeline-blog ul li:nth-child(odd):before,
+    .timeline-blog ul li:nth-child(even):before {
+        top: -18px;
+        left: 16px;
+    }
+
+    .timeline-blog ul li:nth-child(odd) .time-blog,
+    .timeline-blog ul li:nth-child(even) .time-blog {
+        top: -30px;
+        left: 50px;
+        right: inherit;
+    }
+}
