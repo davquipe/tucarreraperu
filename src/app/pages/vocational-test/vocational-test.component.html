@@ -1,1 +1,40 @@
-<p>vocational-test works!</p>
+<div style="margin-top: 8rem;">
+    <h2>Test de orientación vocacional</h2>
+    <hr>
+    <br>
+    <table class="table table-borderless" *ngFor="let p of preguntas">
+        <div class="text-center">
+            <img [src]="p.img" alt="" class="img-thumbnail" style="height: 200px;">
+        </div>
+        <thead>
+          <tr>
+            <span style="font-size: 1.5rem;">{{p.pregunta}}</span>
+          </tr>
+        </thead>
+        <tbody *ngIf="p.respuestas">
+          <tr *ngFor="let r of p.respuestas">
+            <div class="input-group mt-3">
+                <div class="input-group-prepend">
+                  <span  class="input-group-text"> </span>
+                </div>
+                <input  (keypress)="verResultado(myInput)" #myInput type="text" class="form-control" disabled [value]="r.rpta" style="cursor: pointer;">
+            </div>
+          </tr>
+        </tbody>
+        <pre>{{p.respuestas.length === 0}}</pre>
+        <tbody  *ngIf="p.respuestas.length === 0">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                  Si
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <label class="form-check-label" for="exampleRadios2">
+                  No
+                </label>
+              </div>
+        </tbody>
+    </table>
+</div>

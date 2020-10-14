@@ -8,6 +8,7 @@ import { SharedModule } from './shared/shared.module';
 
 import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
 import { environment } from '../environments/environment';
+import { HttpClientModule } from '@angular/common/http';
 
 const trakingCode = environment.googleAnalytics
 
@@ -22,7 +23,8 @@ const trakingCode = environment.googleAnalytics
     BrowserAnimationsModule,
     SharedModule,
     NgxGoogleAnalyticsModule.forRoot(trakingCode),
-    NgxGoogleAnalyticsRouterModule
+    NgxGoogleAnalyticsRouterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

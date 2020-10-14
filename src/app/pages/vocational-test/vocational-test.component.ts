@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VocationalTestService } from '../../services/vocational-test.service';
 
 @Component({
   selector: 'app-vocational-test',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VocationalTestComponent implements OnInit {
 
-  constructor() { }
+  preguntas: any[]= [];
+
+  constructor(
+    private vcService: VocationalTestService
+  ) { }
 
   ngOnInit(): void {
+    this.cargarPreguntas();
+  }
+
+  cargarPreguntas() {
+    this.vcService.cargarPreguntas().subscribe((resp: any) => {
+      this.preguntas = resp.preguntas;
+      console.log(this.preguntas);
+    })
+  }
+
+  verResultado( event: any) {
+    console.log('gaaaaaaaaaaaaa',event);
   }
 
 }
