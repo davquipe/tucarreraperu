@@ -23,20 +23,20 @@ export class VocationalTestService {
 
   // Crear nueva pregunta
   crearPregunta(pregunta: any) {
-    console.log(pregunta);
-    const formData: any = new FormData();
-    formData.append('pregunta', pregunta.pregunta);
-    formData.append('img', pregunta.img);
-    return this.http.post(`${base_url}/preguntas`, formData);
+    // console.log(pregunta);
+    // const formData: any = new FormData();
+    // formData.append('pregunta', pregunta.pregunta);
+    // formData.append('img', pregunta.img);
+    return this.http.post(`${base_url}/preguntas`, pregunta);
   }
 
 
   actualizarPregunta(pregunta: any) {
-    console.log('servicio',pregunta);
-    const formData: any = new FormData();
-    formData.append('pregunta', pregunta.pregunta);
-    formData.append('img', pregunta.img);
-    return this.http.put(`${base_url}/preguntas/${pregunta.id}`, formData);
+    // console.log('servicio',pregunta);
+    // const formData: any = new FormData();
+    // formData.append('pregunta', pregunta.pregunta);
+    // formData.append('img', pregunta.img);
+    return this.http.put(`${base_url}/preguntas/${pregunta.id}`, pregunta);
   }
 
   borrarPregunta(id: string) {
@@ -58,5 +58,13 @@ export class VocationalTestService {
   borrarRespuesta(pid: string, rid: string) {
     return this.http.delete(`${base_url}/preguntas/respuesta/${pid}/${rid}`);
   }
+
+  /**
+   * Cargar carreras
+   */
+
+   cargarCarreras() {
+     return this.http.get(`${base_url}/carreras`);
+   }
 
 }

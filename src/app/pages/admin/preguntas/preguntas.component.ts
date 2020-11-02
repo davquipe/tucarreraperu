@@ -17,6 +17,7 @@ export class PreguntasComponent implements OnInit {
   imageURL: string;
 
   preguntas: any [] = [];
+  carreras: any [] = [];
   pid: string;
   rid: string;
 
@@ -42,7 +43,8 @@ export class PreguntasComponent implements OnInit {
     this.library.addIcons(faTimes);
     this.preguntaForm = this.fb.group({
       pregunta: ['', Validators.required],
-      img: ['', Validators.required],
+      carrera: ['', Validators.required],
+      // img: ['', Validators.required],
       id: ['']
     });
 
@@ -55,7 +57,7 @@ export class PreguntasComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargarPreguntas();
-    
+    this.cargarCarreras();
   }
 
   get f() { return this.preguntaForm.controls; }
@@ -80,12 +82,8 @@ export class PreguntasComponent implements OnInit {
     console.log(pregunta);
     
     if (pregunta) {
-      this.imageURL = pregunta.img;
-      this.preguntaForm.patchValue({
-        pregunta: pregunta.pregunta,
-        id: pregunta.id,
-        img: pregunta.img
-      });
+      // this.imageURL = pregunta.img;
+      this.preguntaForm.patchValue(pregunta);
     } else {
       this.preguntaForm.reset();
     }
@@ -111,14 +109,15 @@ export class PreguntasComponent implements OnInit {
         }
       })
     } else {
-      console.log('creando'); 
+      console.log('creando');
+      console.log(this.preguntaForm.value);
       this.vcService.crearPregunta(this.preguntaForm.value).subscribe((resp: any) => {
         console.log(resp);
         if (resp.ok === true) {
           this.cargarPreguntas();
           this.modalRef.hide();
         }
-      })
+      });
     }
   }
 
@@ -182,6 +181,18 @@ export class PreguntasComponent implements OnInit {
     this.vcService.borrarRespuesta(pregunta.id, respuesta._id).subscribe(resp => {
       console.log(resp);
       this.cargarPreguntas();
+    })
+  }
+
+
+  /**
+   * Cargar carreras
+   */
+
+  cargarCarreras() {
+    this.vcService.cargarCarreras().subscribe((resp: any) => {
+      console.log('gaaaaaaaaaaaaa',resp);
+      this.carreras = resp.carreras;
     })
   }
 

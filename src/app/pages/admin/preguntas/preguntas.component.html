@@ -66,14 +66,21 @@
                 </div>
             </div>
             <div class="form-group">
+                <label for="exampleFormControlSelect1">Carrera profesional</label>
+                <select class="form-control" formControlName="carrera" id="exampleFormControlSelect1">
+                  <option default>Selecciona una carrera</option>
+                  <option *ngFor="let c of carreras" [value]="c._id">{{c.nombre}}</option>
+                </select>
+            </div>
+            <!-- <div class="form-group">
                 <label>Imagen </label>
                 <input type="file" accept="image/*" (change)="showPreview($event)" />
-            </div>
+            </div> -->
 
              <!-- Image Preview -->
-            <div class="imagePreview" *ngIf="imageURL && imageURL !== ''">
+            <!-- <div class="imagePreview" *ngIf="imageURL && imageURL !== ''">
                 <img [src]="imageURL" class="img-fluid">
-            </div>
+            </div> -->
 
             <button [disabled]="preguntaForm.invalid"  class="btn btn-primary" type="submit">Enviar</button>
             <button  type="button" class="btn btn-danger" (click)="cancelar()">Cancelar</button>
