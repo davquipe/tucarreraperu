@@ -30,7 +30,33 @@ export class VocationalTestService {
     return this.http.post(`${base_url}/preguntas`, formData);
   }
 
-  actualizarPregunta(id: string, pregunta: any) {
-    return this.http.put(`${base_url}/preguntas/${id}`, pregunta);
+
+  actualizarPregunta(pregunta: any) {
+    console.log('servicio',pregunta);
+    const formData: any = new FormData();
+    formData.append('pregunta', pregunta.pregunta);
+    formData.append('img', pregunta.img);
+    return this.http.put(`${base_url}/preguntas/${pregunta.id}`, formData);
   }
+
+  borrarPregunta(id: string) {
+    return this.http.delete(`${base_url}/preguntas/${id}`);
+  }
+
+
+  /**
+   * CRUD respuesta
+   */
+  crearRespuesta(id: string, respuesta: any) {
+    return this.http.put(`${base_url}/preguntas/respuesta/${id}`, respuesta);
+  }
+
+  actualizarRespuesta(respuesta: any) {
+    return this.http.put(`${base_url}/preguntas/respuesta/${respuesta.pid}/${respuesta._id}`, respuesta);
+  }
+
+  borrarRespuesta(pid: string, rid: string) {
+    return this.http.delete(`${base_url}/preguntas/respuesta/${pid}/${rid}`);
+  }
+
 }
