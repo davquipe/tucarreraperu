@@ -10,6 +10,8 @@ import { VocationalTestService } from '../../services/vocational-test.service';
 })
 export class RegisterComponent implements OnInit {
 
+  emailPattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+
   registroForm: FormGroup
 
   constructor( 

@@ -3,7 +3,7 @@
       <input  class="form-control" formControlName="nombres" type="text" placeholder="Nombre completo"  [ngClass]="{ 'is-invalid': f.nombres.touched && f.nombres.errors }">
     </div>
     <div class="form-group">
-      <input  class="form-control" formControlName="email" type="email" placeholder="Correo electrónico" >
+      <input  class="form-control" formControlName="email" type="email" placeholder="Correo electrónico" [pattern]="emailPattern" [ngClass]="{ 'is-invalid': f.email.touched && f.email.errors }">
     </div>
     <div class="form-group">
       <input  class="form-control" formControlName="celular" type="text" placeholder="Celular">
