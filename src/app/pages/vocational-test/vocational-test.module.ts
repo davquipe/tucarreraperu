@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { VocationalTestRoutingModule } from './vocational-test-routing.module';
 import { VocationalTestComponent } from './vocational-test.component';
 import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
   imports: [
     CommonModule,
     VocationalTestRoutingModule,
-    ProgressbarModule
+    ProgressbarModule,
+    FormsModule
   ]
 })
 export class VocationalTestModule { }

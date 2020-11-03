@@ -8,7 +8,10 @@ import { VocationalTestService } from '../../services/vocational-test.service';
 })
 export class VocationalTestComponent implements OnInit {
 
-  preguntas: any[]= [];
+  public totalPreguntas: number = 0;
+  public preguntas: any[]= [];
+
+  public desde: number = 0;
 
   constructor(
     private vcService: VocationalTestService
@@ -19,14 +22,28 @@ export class VocationalTestComponent implements OnInit {
   }
 
   cargarPreguntas() {
-    this.vcService.cargarPreguntas().subscribe((resp: any) => {
+    this.vcService.cargarTests( this.desde ).subscribe((resp: any) => {
       this.preguntas = resp.preguntas;
+      this.totalPreguntas = resp.total;
+      // this.desde = 2;
       console.log(this.preguntas);
     })
   }
 
   verResultado( event: any) {
+    const id = event._id;
     console.log('gaaaaaaaaaaaaa',event);
   }
+
+  cambiarPagina(valor: number) {
+    this.desde += valor;
+    if ( this.desde < 0 ) {
+      this.desde = 0;
+    } else if ( this.desde >= this.totalPreguntas ) {
+      this.desde -= valor; 
+    }
+    this.cargarPreguntas();
+  }
+
 
 }
