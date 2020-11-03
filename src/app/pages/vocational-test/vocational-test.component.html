@@ -1,11 +1,11 @@
 <div style="margin-top: 8rem;">
     <h2>Test de orientación vocacional</h2>
     <hr>
-    <progressbar [max]="100" [value]="60">
-      <span class="text-nowrap">60 / 100</span>
-    </progressbar>
     <br>
     <table class="table table-borderless" *ngFor="let p of preguntas">
+        <progressbar [max]="100" [value]="60">
+          <span class="text-nowrap">60 / 100</span>
+        </progressbar>
         <div class="text-center">
             <img [src]="p.img" alt="" class="img-thumbnail" style="height: 200px;">
         </div>
@@ -40,6 +40,6 @@
               </div>
         </tbody>
         <hr>
-        <button type="submit" class="btn btn-primary float-right" (click)="verResultado()">Siguiente</button>
+        <button type="submit" class="btn btn-primary float-right" (click)="verResultado()">Siguiente Pregunta</button>
     </table>
 </div>
