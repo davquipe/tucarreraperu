@@ -5,41 +5,43 @@
       <span class="text-nowrap">{{desde}} / {{totalPreguntas}}</span>
     </progressbar>
     <br>
-    <table class="table table-borderless" *ngFor="let p of preguntas; let i = index">
-        <!-- <div class="text-center">
-            <img [src]="p.img" alt="" class="img-thumbnail" style="height: 200px;">
-        </div> -->
-        <thead>
-          <tr>
-            <p class="pregunta__parrf">{{ i + 1 }}. {{p.pregunta}}</p>
-          </tr>
-        </thead>
-        <tbody *ngIf="p.respuestas">
-          <tr *ngFor="let r of p.respuestas; let j = index">
-            <div class="form-check">
-                <input type="radio" class="radio" value="{{r._id}}" [(ngModel)]="p._id" [name]='"abc"+i+j' (change)="verResultado(r)">
-                <label class="label">{{r.rpta}}</label>
-                <br>
-            </div>
-          </tr>
-        </tbody>
-        <!-- <pre>{{p.respuestas.length === 0}}</pre>
-        <tbody  *ngIf="p.respuestas.length === 0">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                <label class="form-check-label" for="exampleRadios1">
-                  Si
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                <label class="form-check-label" for="exampleRadios2">
-                  No
-                </label>
-              </div>
-        </tbody> -->
-        <hr>
-      </table>
+    <div class="wrapper">
+      <table class="table table-borderless" *ngFor="let p of preguntas; let i = index">
+          <!-- <div class="text-center">
+              <img [src]="p.img" alt="" class="img-thumbnail" style="height: 200px;">
+          </div> -->
+            <thead>
+              <tr>
+                <p class="pregunta__parf">{{ i + 1 }}. {{p.pregunta}}</p>
+              </tr>
+            </thead>
+            <tbody *ngIf="p.respuestas">
+              <tr *ngFor="let r of p.respuestas; let j = index">
+                <div class="form-check position">
+                    <input type="radio" class="radio" value="{{r._id}}" [(ngModel)]="p._id" [name]='"abc"+i+j' (change)="verResultado(r)">
+                    <label class="label">{{r.rpta}}</label>
+                    <br>
+                </div>
+              </tr>
+            </tbody>
+            <!-- <pre>{{p.respuestas.length === 0}}</pre>
+              <tbody  *ngIf="p.respuestas.length === 0">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                  <label class="form-check-label" for="exampleRadios1">
+                    Si
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                  <label class="form-check-label" for="exampleRadios2">
+                    No
+                  </label>
+                </div>
+              </tbody> -->
+              <hr>
+            </table>
+        </div>
       <div>
         <button (click)="cambiarPagina(-2)" class="btn btn-secondary">Anteriores</button>
         &nbsp;

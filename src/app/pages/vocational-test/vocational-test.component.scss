@@ -1,7 +1,27 @@
+.wrapper{
+    display: grid;
+    // width: 100%;
+    // margin: 0 auto;
+    // grid-template-columns: 600px 600px;
+    grid-template-columns: repeat(auto-fill, minmax(30em, 10fr));
+  
+    // grid-gap: 100px;
+}
 
-
-.pregunta__parrf {
+.pregunta__parf {
     color: black;
     font-size: large;
 }
 
+// .label {
+// // display: inline-block;
+// // cursor: pointer;
+// color: rgb(0, 0, 0);
+// // position: relative;
+// padding: 1px 10px 1px 10px;
+// // border-radius: 5px;
+// // -webkit-transition: all .3s ease;
+// // -o-transition: all .3s ease;
+// // transition: all .3s ease;
+// font-size: large;
+// }
