@@ -11,13 +11,14 @@
         </div> -->
         <thead>
           <tr>
-            <span style="font-size: 1.5rem;">{{p.pregunta}}</span>
+            <p class="pregunta__parrf">{{ i + 1 }}. {{p.pregunta}}</p>
           </tr>
         </thead>
         <tbody *ngIf="p.respuestas">
           <tr *ngFor="let r of p.respuestas; let j = index">
             <div class="form-check">
-                <input type="radio" value="{{r._id}}" [(ngModel)]="p._id" [name]='"abc"+i+j' (change)="verResultado(r)">{{r.rpta}}
+                <input type="radio" class="radio" value="{{r._id}}" [(ngModel)]="p._id" [name]='"abc"+i+j' (change)="verResultado(r)">
+                <label class="label">{{r.rpta}}</label>
                 <br>
             </div>
           </tr>
