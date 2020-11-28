@@ -36,7 +36,6 @@ export class VocationalTestComponent implements OnInit {
       this.totalPreguntas = resp.total;
       this.pageSize = resp.pageSize;
       if ( this.totalPreguntas < (this.page * this.pageSize)) this.activebtn = false;
-      console.log('GAAAAAAAAAAA',Math.round(12.16666666666667) + 1);
     })
   }
 
