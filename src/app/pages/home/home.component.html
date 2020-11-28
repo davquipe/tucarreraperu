@@ -2,190 +2,28 @@
   <div class="card-body">
     <div class="text-center">
       <a class="black btn-base" style="color: white; position:relative; top:50%;">CARRERAS PROFESIONALES</a>
-    </div><br>
-    <div class="row" align="center">
-      <div class="col-lg-4">
-        <img src="../../../assets/admin.png" class="rounded-circle" alt="Cinque Terre" width="50%"><br>
-        <a class="btn btn-outline-info" href="#" role="button" (click)="openModal(admin)">Administración</a>
-      </div>
-      <div class="col-lg-4">
-        <img src="../../../assets/medic.png" class="rounded-circle" alt="Cinque Terre" width="50%"><br>
-        <a class="btn btn-outline-info" href="#" role="button" (click)="openModal(medicina)">Medicina</a>
-      </div>
-
-      <div class="col-lg-4">
-        <img src="../../../assets/arqui.png" class="rounded-circle" alt="Cinque Terre" width="50%"><br>
-        <a class="btn btn-outline-info" href="#" role="button" (click)="openModal(arquitectura)">Arquitectura</a>
-      </div>
     </div>
-    <br>
+      <br>
     <div class="row" align="center">
-      <div class="col-lg-4">
-        <img src="../../../assets/chef.png" class="rounded-circle" alt="Cinque Terre" width="50%"><br>
-        <a class="btn btn-outline-info" href="#" role="button" (click)="openModal(gastronomia)">Gastronomía</a>
+      <div class="col-lg-4" *ngFor="let c of carrera;">
+        <img [src]="c.img" class="rounded-circle" alt="Cinque Terre" width="50%"><br>
+        <a class="btn btn-outline-info" href="#" role="button" (click)="openModal(carrerass)">{{ c.carreras }}</a>
       </div>
-      <div class="col-lg-4">
-        <img src="../../../assets/leyes.png" class="rounded-circle" alt="Cinque Terre" width="50%"><br>
-        <a class="btn btn-outline-info" href="#" role="button" (click)="openModal(derecho)">Derecho</a>
-      </div>
-      <div class="col-lg-4">
-        <img src="../../../assets/market.png" class="rounded-circle" alt="Cinque Terre" width="50%"><br>
-        <a class="btn btn-outline-info" href="#" role="button" (click)="openModal(marketing)">Marketing</a>
-      </div>
-    </div>
-    <br>
-    <div class="row" align="center">
-      <div class="col-lg-4">
-        <img src="../../../assets/aerom.png" class="rounded-circle" alt="Cinque Terre" width="50%"><br>
-        <a class="btn btn-outline-info" href="#" role="button" (click)="openModal(azafata)">Azafata</a>
-      </div>
-      <div class="col-lg-4">
-        <img src="../../../assets/pilot.png" class="rounded-circle" alt="Cinque Terre" width="50%"><br>
-        <a class="btn btn-outline-info" href="#" role="button" (click)="openModal(aviacion)">Aviación</a>
-      </div>
-      <div class="col-lg-4">
-        <img src="../../../assets/polic.png" class="rounded-circle" alt="Cinque Terre" width="50%"><br>
-        <a class="btn btn-outline-info" href="#" role="button" (click)="openModal(policia)">Policía</a>
-      </div>
-    </div>
   </div>
 </div>
 
-<ng-template #admin>
-  <div class="modal-header">
-    <h4 class="modal-title pull-left">Administración y
-      Negocios Internacionales</h4>
-    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <img src="../../../assets/admin.png" alt="Image de Administración" width="100%">
-    <br>
-    <br>
-    La carrera de Administración y Negocios Internacionales de la Facultad de Ciencias Empresariales forma profesionales que dominen los negocios a nivel internacional y sean capaces de competir globalmente, tanto en empresas nacionales, multinacionales, exportadoras e importadoras, así como en negocios propios vinculados al comercio internacional de bienes y servicios.
-  </div>
-</ng-template>
+  <ng-template #carrerass>
+    <div class="modal-header" *ngFor="let c of carrera">
+      <h4 class="modal-title pull-left">{{ c.carreras }}</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <img [src]="c.img" alt="Image de Administración" width="100%">
+      <br>
+      <br>
+      {{v.descipcion}}
+    </div>
+  </ng-template>
 
-<ng-template #medicina>
-  <div class="modal-header">
-    <h4 class="modal-title pull-left">Medicina Humana</h4>
-    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <img src="../../../assets/medic.png" alt="Image de Medicina Humana" width="100%">
-    <br>
-    <br>
-    Medicina es ciencia, porque buscarás entender el porqué de las funciones del ser humano y las razones por las que las personas se enferman, y más importante aún, cómo ayudar al paciente que sufre, a la comunidad que necesita educación en prevención y promoción de un estilo de vida saludable.
-  </div>
-</ng-template>
-
-<ng-template #arquitectura>
-  <div class="modal-header">
-    <h4 class="modal-title pull-left">Arquitectura</h4>
-    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <img src="../../../assets/medic.png" alt="Image de Medicina Humana" width="100%">
-    <br>
-    <br>
-    Serás responsable de diseñar todo tipo de edificaciones y espacios de uso urbano, tanto público como privado. Gestionarás proyectos de alta complejidad en diversas condiciones, actuando con ética y responsabilidad social, siempre en la búsqueda de construir un mejor lugar para vivir, cumpliendo con las normas de construcción y derecho urbanístico vigentes, y respetando las diversas formas de vida, expresión cultural, arquitectónica y ambiental de cada región.
-  </div>
-</ng-template>
-
-<ng-template #gastronomia>
-  <div class="modal-header">
-    <h4 class="modal-title pull-left">Gastronomía</h4>
-    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <img src="../../../assets/medic.png" alt="Image de Medicina Humana" width="100%">
-    <br>
-    <br>
-    Estudiar Gastronomía se trata del descubrimiento, la investigación y la comprensión de la elaboración de la comida y todo lo que implica la alimentación. Incluso se aprende la relación entre la cultura y la nutrición. El principio de la Gastronomía es que la comida es una ciencia, además de una forma de arte.
-  </div>
-</ng-template>
-
-<ng-template #derecho>
-  <div class="modal-header">
-    <h4 class="modal-title pull-left">Derecho</h4>
-    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <img src="../../../assets/medic.png" alt="Image de Derecho" width="100%">
-    <br>
-    <br>
-    Estudiar Derecho es estudiar una carrera universitaria que te servirá, además de para conocer el entorno jurídico empresarial, para descubrir también el funcionamiento de la sociedad actual. Una carrera gratificante que ofrece diversas salidas profesionales, que te ayudarán a integrarte en el entorno laboral haciendo lo que más te gusta.
-  </div>
-</ng-template>
-
-<ng-template #marketing>
-  <div class="modal-header">
-    <h4 class="modal-title pull-left">Marketing</h4>
-    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <img src="../../../assets/medic.png" alt="Image de Marqueting" width="100%">
-    <br>
-    <br>
-    El marketing se ocupa de todos los procesos que atañen a la relación de una marca con sus clientes y mercados potenciales. ... El marketing es, en resúmen, la proyección de una marca, empresa u organización (ya sea con o sin fines de lucro) hacia el mercado.
-  </div>
-</ng-template>
-
-<ng-template #azafata>
-  <div class="modal-header">
-    <h4 class="modal-title pull-left">Azafata</h4>
-    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <img src="../../../assets/medic.png" alt="Image de Azafata" width="100%">
-    <br>
-    <br>
-    No existe una carrera universitaria para convertirse en aeromoza o TCP pero existen cursos que puedes hacer, incluso en muchas de las ocasiones, suele ser requisito de un proceso de reclutamiento el tomar un curso antes de comenzar a trabajar como sobrecargo en una compañía aérea.
-  </div>
-</ng-template>
-
-<ng-template #aviacion>
-  <div class="modal-header">
-    <h4 class="modal-title pull-left">Aviacion</h4>
-    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <img src="../../../assets/pilot.png" alt="Image de Aviador" width="100%">
-    <br>
-    <br>
-    ¿Quién no ha querido alguna vez ser piloto de avión? Quien más quien menos ha soñado alguna vez con volar por sus propios medios, pero para cumplir ese sueño hace falta tesón, formación y otras muchas cosas.
-    <br>
-    <br>
-    Grado universitario en Piloto de Aviación Comercial y Operaciones Aéreas: Se trata de una carrera de 4 años de duración y 240 créditos ECTS. En este grado se aprende física, matemáticas y aeronáutica, además de formación con simuladores de vuelo y prácticas de vuelo reales. Con esta titulación se puede trabajar como piloto comercial, director de operaciones aéreas o ingeniero de vuelo. Si después se superan unas oposiciones, se puede trabajar como controlador aéreo o ingeniero en la AESA.
-  </div>
-</ng-template>
-
-<ng-template #policia>
-  <div class="modal-header">
-    <h4 class="modal-title pull-left">Medicina Humana</h4>
-    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <img src="../../../assets/polic.png" alt="Image de Policia" width="100%">
-    <br>
-    <br>
-    La carrera de policía y el termino Policía, se utiliza a nivel mundial, para referirnos a los instituciones u organismos encargado de la seguridad ciudadana en cada país, región y ciudad, son los principales actores cuando se comete un ilícito (delito), fuese cual fuese.
-  </div>
-</ng-template>

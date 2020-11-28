@@ -1,0 +1,47 @@
+[
+    {
+        "carreras": "Administración",
+        "descripcion": "La carrera de Administración y Negocios Internacionales de la Facultad de Ciencias Empresariales forma profesionales que dominen los negocios a nivel internacional y sean capaces de competir globalmente, tanto en empresas nacionales, multinacionales, exportadoras e importadoras, así como en negocios propios vinculados al comercio internacional de bienes y servicios.",
+        "img": "../../../assets/admin.png"
+    },
+    {
+        "carreras": "Medicina",
+        "descripcion": "Medicina es ciencia, porque buscarás entender el porqué de las funciones del ser humano y las razones por las que las personas se enferman, y más importante aún, cómo ayudar al paciente que sufre, a la comunidad que necesita educación en prevención y promoción de un estilo de vida saludable.",
+        "img": "../../../assets/medic.png"
+    },
+    {
+        "carreras": "Arquitectura",
+        "descripcion": "Serás responsable de diseñar todo tipo de edificaciones y espacios de uso urbano, tanto público como privado. Gestionarás proyectos de alta complejidad en diversas condiciones, actuando con ética y responsabilidad social, siempre en la búsqueda de construir un mejor lugar para vivir, cumpliendo con las normas de construcción y derecho urbanístico vigentes, y respetando las diversas formas de vida, expresión cultural, arquitectónica y ambiental de cada región.",
+        "img": "../../../assets/arqui.png"
+    },
+    {
+        "carreras": "Gastronomía",
+        "descripcion": "Estudiar Gastronomía se trata del descubrimiento, la investigación y la comprensión de la elaboración de la comida y todo lo que implica la alimentación. Incluso se aprende la relación entre la cultura y la nutrición. El principio de la Gastronomía es que la comida es una ciencia, además de una forma de arte.",
+        "img": "../../../assets/chef.png"
+    },
+    {
+        "carreras": "Derecho",
+        "descripcion": "Estudiar Derecho es estudiar una carrera universitaria que te servirá, además de para conocer el entorno jurídico empresarial, para descubrir también el funcionamiento de la sociedad actual. Una carrera gratificante que ofrece diversas salidas profesionales, que te ayudarán a integrarte en el entorno laboral haciendo lo que más te gusta.",
+        "img": "../../../assets/leyes.png"
+    },
+    {
+        "carreras": "Marketing",
+        "descripcion": "El marketing se ocupa de todos los procesos que atañen a la relación de una marca con sus clientes y mercados potenciales. ... El marketing es, en resúmen, la proyección de una marca, empresa u organización (ya sea con o sin fines de lucro) hacia el mercado.",
+        "img": "../../../assets/market.png"
+    },
+    {
+        "carreras": "Azafata",
+        "descripcion": "No existe una carrera universitaria para convertirse en aeromoza o TCP pero existen cursos que puedes hacer, incluso en muchas de las ocasiones, suele ser requisito de un proceso de reclutamiento el tomar un curso antes de comenzar a trabajar como sobrecargo en una compañía aérea.",
+        "img": "../../../assets/aerom.png"
+    },
+    {
+        "carreras": "Aviación",
+        "descripcion": "¿Quién no ha querido alguna vez ser piloto de avión? Quien más quien menos ha soñado alguna vez con volar por sus propios medios, pero para cumplir ese sueño hace falta tesón, formación y otras muchas cosas",
+        "img": "../../../assets/pilot.png"
+    },
+    {
+        "carreras": "Policía",
+        "descripcion": "La carrera de policía y el termino Policía, se utiliza a nivel mundial, para referirnos a los instituciones u organismos encargado de la seguridad ciudadana en cada país, región y ciudad, son los principales actores cuando se comete un ilícito (delito), fuese cual fuese.",
+        "img": "../../../assets/polic.png"
+    }
+]
