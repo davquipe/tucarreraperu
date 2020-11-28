@@ -18,27 +18,12 @@
             <tbody *ngIf="p.respuestas">
               <tr *ngFor="let r of p.respuestas; let j = index">
                 <div class="form-check position">
-                    <input type="radio" class="radio" value="{{r._id}}" [(ngModel)]="p._id" [name]='"abc"+i+j' (change)="verResultado(r)">
+                    <input type="radio" class="radio" value="{{r._id}}" [(ngModel)]="p._id" [name]='"abc"+i+j' (change)="seleccionar(p,r)">
                     <label class="label">{{r.rpta}}</label>
                     <br>
                 </div>
               </tr>
             </tbody>
-            <!-- <pre>{{p.respuestas.length === 0}}</pre>
-              <tbody  *ngIf="p.respuestas.length === 0">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                  <label class="form-check-label" for="exampleRadios1">
-                    Si
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                  <label class="form-check-label" for="exampleRadios2">
-                    No
-                  </label>
-                </div>
-              </tbody> -->
               <hr>
             </table>
         </div>
@@ -46,7 +31,7 @@
         <button (click)="atras(-1)" class="btn btn-secondary">Anteriores</button>
         &nbsp;
         <button *ngIf="activebtn" (click)="siguiente(+1)" class="btn btn-secondary">Siguientes</button>
-        <button *ngIf="!activebtn" class="btn btn-succes">Finalizar</button>
+        <button *ngIf="!activebtn" (click)="finalizar()" class="btn btn-succes">Finalizar</button>
       </div>
       <br>
       <br>

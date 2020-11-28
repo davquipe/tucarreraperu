@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { VocationalTestService } from '../../services/vocational-test.service';
 
@@ -14,6 +14,7 @@ export class VocationalTestComponent implements OnInit {
   public page: number;
   public pageSize: number;
   public activebtn: boolean = true;
+  respuestas: any [] = [];
 
   constructor(
     private vcService: VocationalTestService,
@@ -39,12 +40,15 @@ export class VocationalTestComponent implements OnInit {
     })
   }
 
-  verResultado( event: any) {
-    // let existing = localStorage.getItem('guardandoRespuesta');
-    // const id = event._id;
-    // existing = existing ? existing.split(',') : [];
-    // existing.push(event);
-    // localStorage.setItem('guardandoRespuesta', existing.toString());
+  seleccionar( p: any, r: any) {
+      const data = { id: p.id, carrera:  p.carrera,  pregunta: p.pregunta, respuesta: r.rpta, puntaje: r.puntos }
+      this.respuestas.some((temp,i) => {
+        if (temp.id == p.id) this.respuestas.splice(i,1);
+      }) || this.respuestas.push(data);
+
+      localStorage.setItem('respuestas', JSON.stringify(this.respuestas));
+      console.log(this.respuestas);
+    
   }
 
   atras(atras: number) {
@@ -67,6 +71,20 @@ export class VocationalTestComponent implements OnInit {
       this.activebtn = false;
     }
   }
+
+  finalizar() {
+    // this.respuestas.map(respuesta => {
+    //   // this.vcService.guardarRespuesta(respuesta).su
+    // });
+  }
+
+
+  @HostListener('window:beforeunload', ['$event'])
+  onWindowClose(event: any): void {
+    event.preventDefault();
+    event.returnValue = false;
+  }
+
 
 
 }
