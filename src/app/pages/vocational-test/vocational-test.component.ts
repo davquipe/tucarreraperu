@@ -31,8 +31,12 @@ export class VocationalTestComponent implements OnInit {
   }
 
   verResultado( event: any) {
+    var existing = localStorage.getItem('guardandoRespuesta');
     const id = event._id;
     console.log('gaaaaaaaaaaaaa',event);
+    existing = existing ? existing.split(',') : [];
+    existing.push(event);
+    localStorage.setItem('guardandoRespuesta', existing.toString());
   }
 
   cambiarPagina(valor: number) {
