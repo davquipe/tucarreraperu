@@ -20,8 +20,8 @@ export class VocationalTestService {
   cargarPreguntas() {
     return this.http.get(`${base_url}/preguntas`);
   };
-  cargarTests(desde: number = 0) {
-    return this.http.get(`${base_url}/preguntas/tests?desde=${desde}`);
+  cargarTests(page: number) {
+    return this.http.get(`${base_url}/preguntas/tests?page=${page}`);
   };
 
   // Crear nueva pregunta

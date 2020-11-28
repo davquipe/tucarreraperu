@@ -1,8 +1,8 @@
 <div style="margin-top: 8rem;">
     <h2>Test de orientación vocacional</h2>
     <hr>
-    <progressbar [max]="totalPreguntas" [value]="desde">
-      <span class="text-nowrap">{{desde}} / {{totalPreguntas}}</span>
+    <progressbar [max]="totalPreguntas" [value]="pageSize * page">
+      <span class="text-nowrap">{{pageSize * page}} / {{totalPreguntas}}</span>
     </progressbar>
     <br>
     <div class="wrapper">
@@ -12,7 +12,7 @@
           </div> -->
             <thead>
               <tr>
-                <p class="pregunta__parf">{{ i + 1 }}. {{p.pregunta}}</p>
+                <p class="pregunta__parf">{{ (page - 1) * pageSize + i + 1 }}. {{p.pregunta}}</p>
               </tr>
             </thead>
             <tbody *ngIf="p.respuestas">
@@ -43,9 +43,10 @@
             </table>
         </div>
       <div>
-        <button (click)="cambiarPagina(-2)" class="btn btn-secondary">Anteriores</button>
+        <button (click)="atras(-1)" class="btn btn-secondary">Anteriores</button>
         &nbsp;
-        <button (click)="cambiarPagina(2)" class="btn btn-secondary">Siguientes</button>
+        <button *ngIf="activebtn" (click)="siguiente(+1)" class="btn btn-secondary">Siguientes</button>
+        <button *ngIf="!activebtn" class="btn btn-succes">Finalizar</button>
       </div>
       <br>
       <br>

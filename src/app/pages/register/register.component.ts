@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { GoogleAnalyticsService } from 'ngx-google-analytics';
 import { VocationalTestService } from '../../services/vocational-test.service';
 
 @Component({
@@ -17,7 +18,8 @@ export class RegisterComponent implements OnInit {
   constructor( 
     private vcService: VocationalTestService,
     private fb: FormBuilder,
-    private router: Router
+    private router: Router,
+    private $gaService: GoogleAnalyticsService
   ) { 
     this.registroForm = this.fb.group({
       nombres: ['', Validators.required],
@@ -26,7 +28,7 @@ export class RegisterComponent implements OnInit {
       colegio: [''],
       localidad: ['']
     })
-  }
+}
 
   ngOnInit(): void {
   }
@@ -34,10 +36,11 @@ export class RegisterComponent implements OnInit {
   post() {
     console.log(this.registroForm.value);
     this.vcService.crearParticipante(this.registroForm.value).subscribe(resp => {
+      this.$gaService.event('enter_registro', 'usuario_formulario', 'Datos');
       if (resp['ok'] === true) {
         localStorage.clear();
         localStorage.setItem('participante', JSON.stringify(resp['usuario']));
-        this.router.navigate(['/test-vocacional']);
+        this.router.navigate(['/test-vocacional'], {queryParams: {page: 1}});
       }
       console.log(resp);
     })
