@@ -7,7 +7,7 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent" [collapse]=isCollapsed>
+      <div class="collapse navbar-collapse container" id="navbarSupportedContent" [collapse]=isCollapsed>
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <a class="nav-link" [routerLink]="[ '/' ]" routerLinkActive="active">Inicio</a>
@@ -22,10 +22,7 @@
                 <a class="nav-link" [routerLink]="[ '/blog' ]" routerLinkActive="active">Blog</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-1" type="search" placeholder="Ingrese búsqueda..." aria-label="Search">
-            <button class="btn btn-sm btn-outline-secondary my-2 my-sm-0" type="submit">Buscar</button>
-        </form>
+        
     </div>
 </nav>
 

@@ -12,16 +12,16 @@
   </div>
 </div>
 
-  <ng-template #carrerass>
-    <div class="modal-header" >
-      <h4 class="modal-title pull-left">{{dCarrera.carreras}}</h4>
-      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <img [src]="dCarrera.img" alt="Image de Administración" width="100%">
-      {{dCarrera.descripcion}}
-    </div>
-  </ng-template>
+<ng-template #carrerass>
+  <div class="modal-header" >
+    <h4 class="modal-title pull-left">{{dCarrera.carreras}}</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <img class="img-modal" [src]="dCarrera.img" alt="Image de Administración" width="100%">
+    <p>{{dCarrera.descripcion}}</p>
+  </div>
+</ng-template>
 
