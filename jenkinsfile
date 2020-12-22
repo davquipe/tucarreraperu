@@ -8,11 +8,10 @@ node {
     }
 
     stage('Build'){
-        sh 'ng build build:ssr'
+        sh 'ng build --prod'
     }
 
     stage('Deploy'){
-        sh 'pm2 restart all',
-        sh 'pm2 start server.js',
+        sh 'node server.js'
     }
 }
