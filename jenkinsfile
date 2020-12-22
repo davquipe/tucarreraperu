@@ -12,6 +12,6 @@ node {
     }
 
     stage('Deploy'){
-        sh 'node server.ts'
+        sh 'pm2 restart all'
     }
 }
