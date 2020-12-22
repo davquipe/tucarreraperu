@@ -1,16 +1,40 @@
-<div class="card mt-5 mb-5 rounded">
+<div id="div-desktop" class="card mt-5 mb-5 rounded">
   <div class="card-body">
     <div class="text-center">
-      <a class="black btn-base" style="color: white; position:relative; top:50%;">CARRERAS PROFESIONALES</a>
+      <a class="black btn-base">CARRERAS PROFESIONALES</a>
     </div>
-      <br>
+    <br>
     <div class="row" align="center">
       <div class="col-lg-4" *ngFor="let c of carrera;">
         <img [src]="c.img" class="rounded-circle" alt="Cinque Terre" width="50%"><br>
         <a class="btn btn-outline-info" role="button" (click)="openModal(carrerass,c)">{{ c.carreras }}</a>
       </div>
+    </div>
   </div>
 </div>
+
+<br><br><br><br>
+
+<div id="div-mobile" class="scrolling-wrapper row g-4">
+  <div class="col" >
+    <div class="card text-white bg-info h-100" style="width: 18rem;" *ngFor="let c of carrera;">
+      <img [src]="c.img" class="card-img-top" alt="imagen profesinal">
+      <div class="card-body">
+        <h5 class="card-title">{{ c.carreras }}</h5>
+        <a class="btn btn-outline-info" role="button" (click)="openModal(carrerass,c)">{{ c.carreras }}</a>
+      </div>
+    </div>
+  </div>  
+</div>
+<!-- <div id="div-mobile" class="scrolling-wrapper row">
+  <div class="card text-white bg-info mb-3" style="width: 18rem;" *ngFor="let c of carrera;">
+    <img [src]="c.img" class="card-img-top" alt="imagen profesinal">
+    <div class="card-body">
+      <h5 class="card-title">{{ c.carreras }}</h5>
+      <a class="btn btn-outline-info" role="button" (click)="openModal(carrerass,c)">{{ c.carreras }}</a>
+    </div>
+  </div>
+</div> -->
 
 <ng-template #carrerass>
   <div class="modal-header" >
@@ -24,4 +48,28 @@
     <p>{{dCarrera.descripcion}}</p>
   </div>
 </ng-template>
+
+
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-6 col-md-4">
+      <img class="img-fluid" src="https://images.vexels.com/media/users/3/151902/isolated/preview/314d25aec35fdf7c57476c6cba8c2319-dibujos-animados-de-aves-b-uacute-ho-by-vexels.png" alt="">
+    </div>
+    <div class="col-12 col-md-8">
+      <h3 class="display-8">¿Aun no sabes que estudiar?</h3>
+      <p>¡Responde nuestro Test Vocacional <strong>Gratis!</strong></p>
+      <p class="lead">
+        <a class="btn btn-outline-info" [routerLink]="[ '/test' ]" role="button">COMIENZA AQUI</a>
+      </p>
+    </div>
+  </div>
+  
+  <!-- <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  </p> -->
+
+</div>
 

@@ -1,0 +1,17 @@
+node {
+    stage('Checkout SCM'){
+        git branch: 'master', url: 'https://github.com/davquipe/tucarreraperu.git'
+    }
+
+    stage('Install node modules'){
+        sh 'npm install --unsafe-perm'
+    }
+
+    stage('Build'){
+        sh 'ng build build:ssr'
+    }
+
+    stage('Deploy'){
+        sh 'pm2 restart all'
+    }
+}

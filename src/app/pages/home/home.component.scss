@@ -25,6 +25,28 @@ p {
   margin-right: auto
 }
 
-  
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
 
+}
 
+.card {
+  display: inline-block;
+}
+
+@media screen and (min-width: 0px) and (max-width: 700px) {
+  #div-mobile {    display: block;  }
+  #div-desktop {    display: none;  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 3000px) {
+  #div-mobile {    display: none;  }
+  #div-desktop {    display: block;  }
+
+}
+
+.img-fluid {
+  width: 200px;
+}

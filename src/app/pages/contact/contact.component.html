@@ -1,46 +1,70 @@
-<section class="page-section" id="contact">
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="../../../assets/imgs/contact/contact-us-background.jpg" alt="First slide">
+        <strong><h3 class="centered">Contactanos</h3></strong>
+      </div>
+    </div>
+</div>
+
+<section class="contact" id="contact">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center"><br>
-                <h2 class="mt-0">¡Mantengámonos en contacto!</h2>
-                <br>
-                <p class="text-muted mb-5">¿Listo para comenzar tu próximo proyecto con nosotros? ¡Llámanos o envíanos un correo electrónico y nos comunicaremos contigo lo antes posible!</p>
-            </div>
+        <div class="heading text-center">
+            <h4 class="top_120">Contactanos
+                <span> </span></h4>
+            <p>Si quieres ponerte en contacto con nosotros, 
+                <br>puedes enviarnos un mensaje rellenando el siguiente formulario:</p>
         </div>
         <div class="row">
-            <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
-                <i class="fa fa-phone fa-3x mb-3 text-muted"></i>
-                <div>+1 (555) 123-4567</div>
+            <div class="col-md-5">
+                <div class="title">
+                    <h3>Detalles del contacto</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+                </div>
+                <div class="content">
+                    <!-- Info-1 -->
+                    <div class="info">
+                        <i class="fa fa-phone"></i>
+                        <h4 class="d-inline-block">TELÉFONO :
+                            <br>
+                            <span>+51 938 362 830</span></h4>
+                    </div>
+                    <!-- Info-2 -->
+                    <div class="info">
+                        <i class="fa fa-envelope"></i>
+                        <h4 class="d-inline-block">EMAIL :
+                            <br>
+                            <span>contact@tucarreraperu.com</span></h4>
+                    </div>
+                    <!-- Info-3 -->
+                    <div class="info">
+                        <i class="fa fa-facebook"></i>
+                        <h4 class="d-inline-block">FACEBOOK :<br>
+                            <span>@tucarreraperu</span></h4>
+                    </div>
+                </div>
             </div>
-            <div class="col-lg-4 mr-auto text-center">
-                <i class="fa fa-envelope fa-3x mb-3 text-muted"></i>
-                <a class="d-block" href="mailto:contact@yourwebsite.com">contact@tucarrera-peru.com</a>
+
+            <div class="col-md-7">
+
+                <form>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control" placeholder="Nombre">
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="email" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" placeholder="Asunto">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="5" id="comment" placeholder="Mensaje"></textarea>
+                    </div>
+                    <button class="btn btn-block" type="submit">¡Enviar ahora!</button>
+                </form>
             </div>
         </div>
     </div>
-    <hr class="divider my-4">
-    <div class="container contact-form">
-        <form method="post">
-            <h3>Déjanos un mensaje</h3>
-            <div class="form-row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="txtName"  placeholder="Tu nombre *" value="" required/>
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="email" name="txtEmail"  placeholder="Tu correo electrónico *" value="" required/>
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control" type="number" name="txtPhone"  placeholder="Su número de teléfono *" value="" required/>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <textarea class="form-control" name="txtMsg"  placeholder="Tu mensaje *" style="width: 100%; height: 150px;"></textarea>
-                    </div>
-                </div>
-                <button type="submit" name="submit" class="btn-base black">Enviar mensaje</button>
-            </div>
-        </form>
-    </div><br>
 </section>
