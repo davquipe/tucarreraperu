@@ -4,7 +4,7 @@ node {
     }
 
     stage('Install node modules'){
-        sh 'npm install --unsafe-perm'
+        sh 'npm install'
     }
 
     stage('Build'){
