@@ -12,6 +12,6 @@ node {
     }
 
     stage('Deploy'){
-        sh 'node server.js'
+        sh 'node server.ts'
     }
 }
