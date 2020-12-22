@@ -8,7 +8,7 @@ node {
     }
 
     stage('Build'){
-        sh 'ng build --prod'
+        sh 'npm run build:ssr'
     }
 
     stage('Deploy'){
